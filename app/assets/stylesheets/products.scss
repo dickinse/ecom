@@ -1,3 +1,20 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.prdct {
+   background-color: rgba(71,53,36,0.75);
+   padding: 1em;
+   display: inline-block;
+   margin: 2em;
+   max-width: 200px;
+   word-wrap: break-word !important;
+}
+
+th {
+   text-align: center;
+}
+
+td:last-child {
+   text-align: center;
+}

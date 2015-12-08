@@ -1,31 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-    <div class = "container-fluid">
-       <h1>Listing Products</h1>
-        <table class = "table-striped table-bordered table-hover">
-           <thead>
-            <tr>
-                <th class="col-xs-12 col-sm-3 col-md-3">Name</th>
-                <th class="col-xs-12 col-sm-3 col-md-3">Description</th>
-                <th class="col-xs-12 col-sm-3 col-md-3">Image_url</th>
-                <th class="col-xs-12 col-sm-3 col-md-3">Colour</th>
-            </tr>
-           </thead>
-           <tbody>
-               <% @products.each do |product| %>
-            <tr>
-                <td class="col-lg-2 col-sm-2 col-md-2"><%= product.name %></td>
-                <td class="col-lg-2 col-sm-2 col-md-2"><%= product.description %></td>
-                <td class="col-lg-3 col-sm-3 col-md-3"><%= product.image_url %></td>
-                <td class="col-lg-2 col-sm-2 col-md-2"><%= product.colour %></td>
-                <td class="col-lg-1 col-sm-1 col-md-1"><%= link_to 'Show', product %></td>
-                <td class="col-lg-1 col-sm-1 col-md-1"><%= link_to 'Edit', edit_product_path(product) %></td>
-                <td class="col-lg-1 col-sm-1 col-md-1"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
-              <% end %>
-           </tbody>
-        </table>
-    </div>
-<br>
-<%= link_to 'New Product', new_product_path %>
 
+
+   <% @products.each do |product| %>
+<div class = "container prdct">
+<table class="table-bordered table-striped">
+   <thead>
+      <tr>
+         <th class="col-sm-6 col-md-3"><%= product.name %></th>
+      </tr>
+   </thead>
+   <tbody>
+         <tr>
+      <td class="col-sm-6 col-md-3"><%= product.image_url %></td>
+   </tr>
+   <tr>
+      <td class="col-sm-6 col-md-3"><%= product.description %></td>
+   </tr>
+   <tr>
+      <td class="col-sm-6 col-md-3"><%= product.colour %></td>
+   </tr>
+   <tr>
+      <td class="col-sm-6 col-md-3"><%= link_to 'Show -', product %><%= link_to 'Edit -', edit_product_path(product) %><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+   </tr>
+   </tbody>
+</table>
+</div>
+   <% end %>
+
+<footer class="footer navbar-fixed-bottom">
+<%= link_to 'New Product', new_product_path %>
+</footer>

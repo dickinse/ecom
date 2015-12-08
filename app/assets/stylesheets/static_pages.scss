@@ -27,9 +27,14 @@ td {
 
 .table-striped>tbody>tr:nth-child(odd)>td, 
 .table-striped>tbody>tr:nth-child(odd)>th {
-   background-color: #473524;
+   background-color: #262C53;
  }
 
 input, textarea {
    color: black;
+}
+
+footer {
+   background-color: rgba(71,53,36,0.75);
+   text-align: center;
 }
