@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   get 'static_pages/index'  
   get 'static_pages/contact'
   get 'static_pages/landing_page'
-   get 'static_pages/suggestions'
   get 'products/index'
+  get 'mailers/user_mailer'
 
+  post 'static_pages/thank_you'
+
+   
   resources :products 
   resources :orders, only: [:index, :show, :create, :destroy]
 

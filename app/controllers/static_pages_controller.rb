@@ -8,4 +8,5 @@ class StaticPagesController < ApplicationController
    @featured_product = Product.first
    @products = Product.limit(3)
   end
+
 end
