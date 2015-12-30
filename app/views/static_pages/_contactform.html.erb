@@ -1,0 +1,11 @@
+<%= form_tag do %>
+   <div class="form-group">
+      <%= text_area_tag :message, "Name", size: "6x1", class: "form-control" %>
+      <br>
+      <%= email_field(:user, :address, class: "form-control") %>
+      <br>
+      <%= text_area_tag(:message, "Hi, nice site", size: "24x6", class:"form-control") %>
+      <br>
+      <%= submit_tag("Submit") %>
+   </div>
+<% end %>
