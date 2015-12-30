@@ -1,0 +1,9 @@
+<% content_for :view_specific_css do %>
+<%= stylesheet_link_tag "users.scss" %>
+<% end %>
+
+<h1>New User</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', users_path %>

@@ -13,16 +13,25 @@
         </div>
           <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav">
-               <li><%= link_to("Contact", { action: "contact", controller: "static_pages"}) %></li>
-              <li><%= link_to("About Us", { action: "about", controller: "static_pages" }) %></li>
-               <li><%= link_to("Products", { action: "index", controller: "products" }) %></li>
-               <li>
-               <%= form_tag("/products", method: "get") do %>
-                  <%= label_tag(:q, "Search for:") %>
-                  <%= text_field_tag(:q) %>
-                  <%= submit_tag("Search") %>
-               <% end %></li>
+               <li><%= link_to "Products", products_path %></li>
+		  <%= form_tag("/products", method: "get", class: "navbar-form navbar-left") do %>
+		  	<div class="form-group">
+				  <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
+				</div>
+				  <%= submit_tag("Search", class: "btn btn-default") %>
+			<% end %>
             </ul>
+ 		<ul class="nav navbar-nav navbar-right">
+			<% if user_signed_in? %>
+			  <li>
+			  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+			  </li>
+			<% else %>
+			  <li>
+			  <%= link_to('Login', new_user_session_path)  %>
+			  </li>
+			<% end %>
+		</ul>
           </div>
         </div>
     </nav>
