@@ -5,8 +5,8 @@
 	<%= form_for([@product, @product.comments.build], remote: true) do |f| %>
 
 	  <p>
-	    <%= f.label :body, "Comments" %><br>
-	    <%= f.text_area :body %>
+	    <%= f.label :body, "Comments"%><br>
+         <%= f.text_area :body, class: "form-control", placeholder: "Review" %>
 	  </p>
 
 	  <p>
@@ -14,7 +14,7 @@
 	  </p>
 
 	  <p>
-	    <%= f.submit "Submit" %>
+         <%= f.submit "Submit", class: "btn btn-default" %>
 	  </p>
 	<% end %>
 
