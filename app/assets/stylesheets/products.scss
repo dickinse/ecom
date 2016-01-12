@@ -27,7 +27,8 @@ h1 {
 	font-variant: normal;
 	font-weight: 500;
 	line-height: 23px;
-       text-align: center;
+    text-align: center;
+    color: #ACA7A9;
 
 }
 h3 {
@@ -71,7 +72,21 @@ pre {
     margin-right: auto;
     padding: 10px;
     padding-top: 40px;
-    padding-bottom: 40px;
     text-align: center;
-    display: block;
+    width: 50%;
+}
+
+.product-reviews {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 50%;
+}
+
+.new-review {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
 }
