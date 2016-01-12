@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+   <p id="alert" class="alert alert-success"><%= notice %></p>
+<% end %>
 
 <%= render @products %>
 

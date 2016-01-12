@@ -13,9 +13,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body data-spy="scroll" data-target=".navbar">
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-   		<%= render 'layouts/nav' %>
+   <% if notice %>
+       <p id="notice" class="alert alert-success " data-dismiss="alert"><%= notice %></p>
+   <% end %>
+   <% if alert %>
+       <p id="alert" class="alert alert-success " data-dismiss="alert"><%= alert %></p>
+   <% end %>
+   
+   <%= render 'layouts/nav' %>
 <%= yield %>
 
 </body>
