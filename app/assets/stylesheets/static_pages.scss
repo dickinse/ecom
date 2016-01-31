@@ -3,16 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-background-image: image-url('whtnght.jpeg');
-background-repeat: no-repeat;
-background-position: center;
-background-attachment: fixed;
--webkit-background-size: cover;
--mod-background-size: cover;
--o-background-size: cover;
-background-color: cadetblue;
-background-size: cover;
-color: white;
+color: #fff;
 font-size: 1em;
 }
 
@@ -24,11 +15,6 @@ td {
    font-size: .75em;
    font-family: sans-serif;
 }
-
-.table-striped>tbody>tr:nth-child(odd)>td, 
-.table-striped>tbody>tr:nth-child(odd)>th {
-   background-color: #262C53;
- }
 
 input, textarea {
    color: black;
@@ -57,4 +43,50 @@ footer {
    padding-left: 40em;
    text-align: center;
    float: right;
+}
+.navbar {
+   background-color: darkred;
+    position:absolute;
+    top:0px;
+    z-index:10;
+    width:100%;}
+
+/** Pretty Carousel **/
+.carousel {
+    top: 1em;
+    margin-bottom: 3em;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 600px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 600px;
+}
+
+.jumbotron {
+    margin-top: 2em;
+   margin-bottom: 2em;
+    padding: 3em;
+    background-color: cadetblue;
+}
+
+h1 {
+	font-family: Georgia, Times, 'Times New Roman', serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
 }

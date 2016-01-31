@@ -7,13 +7,13 @@
    <p><%= @product.description %></p>
 
 
-   <%= image_tag(@product.image_url, class: "img-thumbnail") %>
+   <%= image_tag(@product.image_url, class: "img-responsive") %>
 
    <p><%= @product.colour %></p>
 
   <strong>Price:</strong> 
    <p>$<%= @product.price %></p>
-   		<p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+   <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
 </div>
 
@@ -21,6 +21,6 @@
 <%= render 'comments' %>
 
 <footer class="footer navbar-fixed-bottom">         <%  if signed_in? && current_user.admin? %>
-            <%= link_to 'Edit -', edit_product_path(product) %>
+            <%= link_to 'Edit -', edit_product_path %>
          <% end %> |
 <%= link_to 'Back', products_path %></footer>

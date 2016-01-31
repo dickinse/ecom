@@ -1,6 +1,35 @@
-<% if notice %>
-   <p id="alert" class="alert alert-success"><%= notice %></p>
-<% end %>
+<div class="container col-md-12">
+<div id="carousels" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousels" data-slide-to="0" class="active"></li>
+    <li data-target="#carousels" data-slide-to="1"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <% @products.each do |product| %>
+	    <div class="item<%= " active" if product == @products.first %>">
+           <%= image_tag(product.image_url, class: "img-responsive center-block") %>
+	      <div class="carousel-caption">
+	        <h1><%= product.name %></h1>
+             <p><%= product.description %></p>
+	      </div>
+	    </div>
+	  <% end %>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousels" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousels" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
 
 <%= render @products %>
 

@@ -1,31 +1,14 @@
-<div class = "container prdct ">
-<table class="table-bordered table-striped">   
-<thead>
-      <tr>
-         <th class="col-sm-6 col-md-3"><%= product.name %></th>
-      </tr>
-   </thead>
-   <tbody>
-         <tr>
-      <td class="col-sm-6 col-md-3"><%= image_tag(product.image_url, class: "img-thumbnail", width: "140", height: "140") %></td>
-   </tr>
-   <tr>
-      <td class="col-sm-6 col-md-3"><%= product.description %></td>
-   </tr>
-   <tr>
-      <td class="col-sm-6 col-md-3"><%= product.colour %></td>
-   </tr>
-   <tr>
-      <td class="col-sm-6 col-md-3">$<%= product.price %></td>
-   </tr>
-   <tr>
-      <td class="col-sm-6 col-md-3"><%= link_to 'Show -', product %>
-         <%  if signed_in? && current_user.admin? %>
-            <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-            <%= link_to 'Edit -', edit_product_path(product) %>
-         <% end %>
-      </td>
-   </tr>
-   </tbody>
-</table>
+<%= link_to product do %>
+<div class="col"> 
+      <div class="inner_content clearfix">
+         <%= image_tag(product.image_url, class: "img-thumbnail") %>
+            <div class="price">
+            <div class="cart-left">
+            <h1><%= product.name %></h1>
+            </div>
+               <blockquote>$<%= product.price %></blockquote>
+               <div class="clear"></div>
+           </div>				
+      </div>
 </div>
+<% end %>

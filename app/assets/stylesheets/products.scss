@@ -2,24 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.prdct {
-   background-color: rgba(71,53,36,0.75);
-   padding: 1em;
-   display: inline-block;
-   margin: 2em;
-   max-width: 200px;
-   word-wrap: break-word !important;
-}
-
-
-th {
-   text-align: center;
-}
-
-td:last-child {
-   text-align: center;
-}
-
 h1 {
 	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 	font-size: 23px;
@@ -56,6 +38,9 @@ blockquote {
 	font-variant: normal;
 	font-weight: 400;
 	line-height: 23px;
+    border-left: 4px solid #ccc;
+    border-right: 4px solid #ccc;
+
 }
 pre {
 	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
@@ -71,7 +56,7 @@ pre {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    padding-top: 40px;
+    top: 5em;
     text-align: center;
     width: 50%;
 }
@@ -136,3 +121,30 @@ pre {
     height: 1%; }
   *:first-child + html .digg_pagination {
     overflow: hidden; }
+
+
+/** What is all this crap **/
+.col{
+   display: block;
+   float:left;
+   width: 22.9%;
+   margin: 1%;
+   background: cadetblue;
+}
+
+.inner_content {
+	padding:10px;
+	position: relative;
+}
+
+.cart-left{
+	width:73.5%;
+	float: left;
+	margin-right: 2.6%;
+}
+
+.price{
+	padding:10px 0 0 0;
+}
+
+.clear{clear:both;}

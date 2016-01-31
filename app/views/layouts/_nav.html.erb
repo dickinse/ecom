@@ -1,19 +1,17 @@
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-            <span class="sr-only">Toggle Navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="navbar-brand">
-            <a href='/'>Jammin' Jams</a>
-          </div>
-        </div>
-          <div class="collapse navbar-collapse" id="navbar-collapse">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+<!--         <a class="navbar-brand" href="#">maiden books</a>-->
+       </div>
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">            
             <ul class="nav navbar-nav">
-               <li><%= link_to "Products", products_path %></li>
+               <li><%= link_to "Shop", products_path %></li>
 		  <%= form_tag("/products", method: "get", class: "navbar-form navbar-left") do %>
 		  	<div class="form-group">
 				  <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
@@ -22,6 +20,7 @@
 			<% end %>
             </ul>
  		<ul class="nav navbar-nav navbar-right">
+<!--           To do - Add Toggle Drop Menu-->
 			<% if user_signed_in? %>
 			  <li>
 			  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
@@ -33,5 +32,5 @@
 			<% end %>
 		</ul>
           </div>
-        </div>
+       </div>
     </nav>
