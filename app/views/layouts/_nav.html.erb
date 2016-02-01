@@ -1,36 +1,55 @@
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-       <div class="navbar-header">
-         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-           <span class="sr-only">Toggle navigation</span>
-           <span class="icon-bar"></span>
-           <span class="icon-bar"></span>
-           <span class="icon-bar"></span>
-         </button>
-<!--         <a class="navbar-brand" href="#">maiden books</a>-->
-       </div>
-         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">            
-            <ul class="nav navbar-nav">
-               <li><%= link_to "Shop", products_path %></li>
-		  <%= form_tag("/products", method: "get", class: "navbar-form navbar-left") do %>
-		  	<div class="form-group">
-				  <%= text_field_tag(:q, nil, class: "form-control", placeholder: "Search") %>
-				</div>
-				  <%= submit_tag("Search", class: "btn btn-default") %>
-			<% end %>
-            </ul>
- 		<ul class="nav navbar-nav navbar-right">
-<!--           To do - Add Toggle Drop Menu-->
-			<% if user_signed_in? %>
-			  <li>
-			  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-			  </li>
-			<% else %>
-			  <li>
-			  <%= link_to('Login', new_user_session_path)  %>
-			  </li>
-			<% end %>
-		</ul>
-          </div>
-       </div>
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">
+                    <% if user_signed_in? %>
+        			  <a href="/">Hey there, <%= current_user.first_name %></a>
+        			<% else %>
+        			  <a href="/">Simple Text</a>
+        			<% end %> 
+        		</div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                       <%= link_to "Home", controller: "/static_pages" %>
+                    </li>
+                    <li>
+                       <%= link_to "Info", "/static_pages/about" %>
+                    </li>
+                    <li>
+                            <% if user_signed_in? %>
+                			  <li>
+                			  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+                			  </li>
+                			<% else %>
+                              <li><a href="#" class="dropdown-toggle" id="loginmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><span class="glyphicon glyphicon-menu-down"></span> Login</a>
+                              <ul class="dropdown-menu" aria-labelledby="loginmenu">
+                                <li><%= link_to('Login', new_user_session_path)  %></li>
+                                <li><%= link_to('Sign up', user_registration_path) %></li>
+                              </ul></li>
+                			<% end %>
+                    </li>
+                    <li>
+                       <%= link_to "Contact", "/static_pages/contact" %>
+                    </li>
+                     <li>
+                        <% if user_signed_in? %>
+                        <%= link_to "Products", products_path %>
+                        <% end %>
+                     </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
     </nav>

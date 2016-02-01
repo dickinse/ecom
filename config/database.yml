@@ -23,3 +23,9 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+
+#development:
+#  adapter: postgresql
+#  host: ec2-54-243-149-147.compute-1.amazonaws.com
+#  username: vqxhznddelptjd
+#  database: dakgrghifrabt
