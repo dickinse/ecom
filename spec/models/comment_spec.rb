@@ -18,5 +18,4 @@ describe Comments do
   it "Is a valid comment" do
     expect (@product).not_to be_valid
   end
-
 end
