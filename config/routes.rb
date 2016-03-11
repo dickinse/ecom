@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'static_pages/about'
-  get 'static_pages/index'  
+  get 'static_pages/index'
   get 'static_pages/contact'
   get 'static_pages/landing_page'
   get 'products/index'
   get 'mailers/user_mailer'
 
   post 'static_pages/thank_you'
+  post 'payments/create'
 
-   
   resources :products  do
     resources :comments
   end
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'products#index'
 
-  #Orders Resources   
+  #Orders Resources
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

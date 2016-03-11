@@ -5,6 +5,8 @@
   data-name="<%= @product.name %>"
   data-description="<%= @product.description %>"
   data-image="<%= image_tag(@product.image_url) %>">
+  :product_id = "<%= hidden_field_tag(@product.id) %>"
+
 </script>
 
 <!-- partials and views, replace the values of data-name, data-description, and data-amount with product specific variables -->
