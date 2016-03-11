@@ -1,0 +1,10 @@
+<script
+  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  data-key="pk_test_zkTjn97XVDfxOEPSQzyZE4VF"
+  data-amount="<%= @product.price %>"
+  data-name="<%= @product.name %>"
+  data-description="<%= @product.description %>"
+  data-image="<%= image_tag(@product.image_url) %>">
+</script>
+
+<!-- partials and views, replace the values of data-name, data-description, and data-amount with product specific variables -->
