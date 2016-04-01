@@ -1,5 +1,5 @@
 <%= link_to product do %>
-<div class="col"> 
+<div class="col">
       <div class="inner_content clearfix">
          <%= image_tag(product.image_url, class: "img-thumbnail") %>
             <div class="price">
@@ -8,7 +8,10 @@
             </div>
                <blockquote>$<%= product.price %></blockquote>
                <div class="clear"></div>
-           </div>				
+           </div>
       </div>
 </div>
+
+<% logger.debug "Product: #{product.name}"%>
+
 <% end %>

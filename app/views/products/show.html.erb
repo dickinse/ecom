@@ -7,7 +7,7 @@
    <p><%= @product.description %></p>
 
 
-   <%= image_tag(@product.image_url, class: "img-responsive") %>
+   <%= image_tag( @product.image_url, width: "350px", class: 'img-zoom', data_image_zoom: @product.image_url) %>
 
    <p><%= @product.colour %></p>
 
