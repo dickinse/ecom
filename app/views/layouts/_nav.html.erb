@@ -13,16 +13,16 @@
         			  <a href="/">Hey there, <%= current_user.first_name %></a>
         			<% else %>
         			  <a href="/">Simple Text</a>
-        			<% end %> 
+        			<% end %>
         		</div>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
+                    <!-- <li>
                        <%= link_to "Home", controller: "/static_pages" %>
-                    </li>
+                    </li> -->
                     <li>
                        <%= link_to "Info", "/static_pages/about" %>
                     </li>
