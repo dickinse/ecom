@@ -26,6 +26,7 @@ gem 'stripe'
 gem 'brakeman', :require => false
 gem 'angularjs-rails'
 gem 'dalli'
+gem 'redis-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
