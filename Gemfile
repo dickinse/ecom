@@ -24,7 +24,8 @@ gem 'cancancan'
 gem 'will_paginate', '~> 3.0.6'
 gem 'stripe'
 gem 'brakeman', :require => false
-gem 'angularjs-rails' 
+gem 'angularjs-rails'
+gem 'dalli'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
